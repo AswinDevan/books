@@ -1,0 +1,75 @@
+[
+    {
+        "id":1,
+        "name":"The Conch Bearer",
+        "author":"Chitra Banerjee Divakaruni",
+        "genre":"Fantasy",
+        "src":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYPcPt5hp01MdcQxBEcbeO-5G92etpAs5uq3az20TtGwJ0GyH7TLzGthKU7hOkWFg2lMY&usqp=CAU",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, officiis aut consequatur aperiam nisi nobis nemo praesentium officia, assumenda blanditiis natus atque quod! Maiores veritatis dolorem accusamus deleniti doloribus cum!"
+    },
+    {
+        "id":2,
+        "name":"The Lost Symbol",
+        "author":"Dan Brown",
+        "genre":"Thriller,Mystery",
+        "src":"https://images-na.ssl-images-amazon.com/images/I/71X1p4TGlxL.jpg",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, officiis aut consequatur aperiam nisi nobis nemo praesentium officia, assumenda blanditiis natus atque quod! Maiores veritatis dolorem accusamus deleniti doloribus cum!"
+    },
+    {
+        "id":3,
+        "name":"Animorphs",
+        "author":"Katherine Applegate, Michael Grant",
+        "genre":"Fantasy,Thriller",
+        "src":"https://m.media-amazon.com/images/I/51k2yzCynRL.jpg",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, officiis aut consequatur aperiam nisi nobis nemo praesentium officia, assumenda blanditiis natus atque quod! Maiores veritatis dolorem accusamus deleniti doloribus cum!"
+    },
+    {
+        "id":4,
+        "name":"The Wizard of Oz",
+        "author":"L Frank Baum",
+        "genre":"Fantasy",
+        "src":"https://images-na.ssl-images-amazon.com/images/I/91yVybdDpZL.jpg",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, officiis aut consequatur aperiam nisi nobis nemo praesentium officia, assumenda blanditiis natus atque quod! Maiores veritatis dolorem accusamus deleniti doloribus cum!"
+    },
+    {
+        "id":5,
+        "name":"Life of Pi",
+        "author":"Yann Martel",
+        "genre":"Action,Adventure",
+        "src":"https://images-na.ssl-images-amazon.com/images/I/51RXI789M0L._SX324_BO1,204,203,200_.jpg",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, officiis aut consequatur aperiam nisi nobis nemo praesentium officia, assumenda blanditiis natus atque quod! Maiores veritatis dolorem accusamus deleniti doloribus cum!"
+    },
+    {
+        "id":6,
+        "name":"Eragon",
+        "author":"Christopher Paolini",
+        "genre":"Fantasy",
+        "src":"https://images-na.ssl-images-amazon.com/images/I/51uuWGQyLSL._SX330_BO1,204,203,200_.jpg",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, officiis aut consequatur aperiam nisi nobis nemo praesentium officia, assumenda blanditiis natus atque quod! Maiores veritatis dolorem accusamus deleniti doloribus cum!"
+    },
+    {
+        "id":7,
+        "name":"To Kill a Mockingbird",
+        "author":"Harper Lee",
+        "genre":"Classic",
+        "src":"https://images-na.ssl-images-amazon.com/images/I/51Z9p5AecCL._SX307_BO1,204,203,200_.jpg",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, officiis aut consequatur aperiam nisi nobis nemo praesentium officia, assumenda blanditiis natus atque quod! Maiores veritatis dolorem accusamus deleniti doloribus cum!"
+    },
+    {
+        "id":8,
+        "name":"Forrest Gump",
+        "author":"Winston Groom",
+        "genre":"Comedy,Drama",
+        "src":"https://images-na.ssl-images-amazon.com/images/I/71bfKSNKwZL.jpg",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, officiis aut consequatur aperiam nisi nobis nemo praesentium officia, assumenda blanditiis natus atque quod! Maiores veritatis dolorem accusamus deleniti doloribus cum!"
+    },
+    {
+        "id":9,
+        "name":"Harry Potter and the Sorcerer's stone",
+        "author":"J K Rowling",
+        "genre":"Fantasy,Adventure",
+        "src":"https://images-na.ssl-images-amazon.com/images/I/81YOuOGFCJL.jpg",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, officiis aut consequatur aperiam nisi nobis nemo praesentium officia, assumenda blanditiis natus atque quod! Maiores veritatis dolorem accusamus deleniti doloribus cum!"
+    }
+]
+
