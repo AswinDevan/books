@@ -5,9 +5,7 @@ import createPersistedState from 'vuex-persistedstate'
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  plugins:[createPersistedState({
-    storage:window.sessionStorage,
- })],
+  plugins:[createPersistedState()],
     state: {
       drawer:null,
       searchValue:'',
@@ -19,15 +17,6 @@ export default new Vuex.Store({
       show1:false,
       formShow:true,
       errorMessage:'',
-      items: [
-        { text: 'Home', icon: 'mdi-home',link:'/home' },
-        { text: 'Explore', icon: 'mdi-compass',link:'/explore' },
-        { text: 'My List', icon: 'mdi-list-status',link:'/list' },
-        { text: 'Author', icon: 'mdi-account-star',link:'/author'},
-      ],
-      chipData:[
-        'All','Fantasy','Action','Thriller','Adventure','Mystery','Classic','Comedy','Drama','Romance'
-      ],
       bookDetails:[],
     },
     mutations:{
@@ -38,8 +27,8 @@ export default new Vuex.Store({
         state.name='',
         state.pass='',
         state.checkbox=false,
-        state.selectedItem=0;
         state.drawer=null;
+        state.selectedItem=0;
       },
       CHANGE_ERROR:(state)=>{
         state.errorMessage="CheckBox must be clicked"
@@ -67,6 +56,12 @@ export default new Vuex.Store({
       },
       CHANGE_SELECTEDITEM:(state,value)=>{
         state.selectedItem=value;
+      },
+      CHANGE_DRAWERMODEL:(state,value)=>{
+        state.drawer=value;
+      },
+      CHANGE_BOOKDETAILS:(state,value)=>{
+        state.bookDetails=value;
       }
     }
   })

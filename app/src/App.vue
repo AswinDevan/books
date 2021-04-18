@@ -1,13 +1,13 @@
 <template>
   <v-app id="app">
     <v-container v-if="!formShow">
-     <v-navigation-drawer v-model="$store.state.drawer" app color="teal">
+     <v-navigation-drawer v-model="drawerModel" app color="teal">
        <v-toolbar-title>
          <v-app-bar-nav-icon @click="changeDraw"></v-app-bar-nav-icon>NovelFull
        </v-toolbar-title>
      <v-list dense>
        <v-subheader>Novel Services</v-subheader>
-       <v-list-item-group v-model="$store.state.selectedItem" color="white">
+       <v-list-item-group v-model="selectedItem" color="white">
         <v-list-item v-for="(item, i) in items" :key="i" @click="route(i)">
           <v-list-item-icon>
             <v-icon v-text="item.icon"></v-icon>
@@ -49,7 +49,7 @@
         </v-card>
         </v-menu>
 
-      <template v-slot:extension>
+      <template v-slot:extension v-if="selectItem==0">
         <v-tabs  next-icon="mdi-arrow-right-drop-circle" prev-icon="mdi-arrow-left-drop-circle" show-arrows>
           <v-tab class="ma-2" v-for="chip in chipData" :key="chip">
             <v-chip>{{chip}}</v-chip>
@@ -66,6 +66,17 @@
 import Router from './route/index'
 export default {
   name: "App",
+  data:()=>({
+           items: [
+        { text: 'Home', icon: 'mdi-home',link:'/home' },
+        { text: 'Explore', icon: 'mdi-compass',link:'/explore' },
+        { text: 'My List', icon: 'mdi-list-status',link:'/list' },
+        { text: 'Author', icon: 'mdi-account-star',link:'/author'},
+      ],
+            chipData:[
+        'All','Fantasy','Action','Thriller','Adventure','Mystery','Classic','Comedy','Drama','Romance','Fiction'
+      ]
+  }),
   methods: {
     route(i) {
       Router.push({ name: this.$store.state.items[i].text });
@@ -84,9 +95,6 @@ export default {
     formShow(){
       return this.$store.state.formShow;
     },
-    chipData(){
-      return this.$store.state.chipData;
-    },
     searchVal:{
       get(){
         return this.$store.state.searchValue;
@@ -97,15 +105,22 @@ export default {
     name(){
       return this.$store.state.name;
     },
-    items(){
-      return this.$store.state.items;
-    },
     selectedItem:{
       get(){
         return this.$store.state.selectedItem;
       },set(value){
         this.$store.commit("CHANGE_SELECTEDITEM",value);
       }
+    },
+    selectItem(){
+      return this.$store.state.selectedItem;
+    },
+    drawerModel:{
+        get(){
+          return this.$store.state.drawer;
+        },set(value){
+          this.$store.commit("CHANGE_DRAWERMODEL",value);
+        }
     }
   }
 };

@@ -22,7 +22,15 @@ export default new Router({
             if(Store.state.formShow==true){
                 return '/login'
             }else{
-                return '/home'
+                if(Store.state.selectedItem==0){
+                    return '/home'
+                }else if(Store.state.selectedItem==1){
+                    return '/explore'
+                }else if(Store.state.selectedItem==2){
+                    return '/list'
+                }else{
+                    return '/author'
+                }
             }
         }}
     ],
