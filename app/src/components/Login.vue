@@ -31,14 +31,12 @@ import Router from '../route/index'
     }),
     methods:{
       checkUser(){
-        if(this.$store.state.checkbox==false){
-            this.$store.commit('CHANGE_ERROR');
-        }else if(this.$store.state.name=='admin'&&this.$store.state.pass=='admin'){
+        if(this.$store.state.name=='admin'&&this.$store.state.pass=='admin'){
           this.$store.commit('LOGIN');
           Router.push({path:'/home'})
         }
         else{
-          this.$store.commit('CHANGE_ERROR2')
+          this.$store.commit('CHANGE_ERROR')
         }
       },
       changeEyecon(){

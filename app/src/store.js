@@ -31,9 +31,6 @@ export default new Vuex.Store({
         state.selectedItem=0;
       },
       CHANGE_ERROR:(state)=>{
-        state.errorMessage="CheckBox must be clicked"
-      },
-      CHANGE_ERROR2:(state)=>{
         state.errorMessage="Invalid User"
       },
       CHANGE_DRAWER:(state)=>{
