@@ -18,7 +18,7 @@ export default new Router({
         {path:"/explore",name:"Explore",component:Explore},
         {path:"/list",name:"My List",component:List},
         {path:"/author",name:"Author",component:Author},
-        {path:"/",redirect:()=>{
+        {path:"/**",redirect:()=>{
             if(Store.state.formShow==true){
                 return '/login'
             }else{

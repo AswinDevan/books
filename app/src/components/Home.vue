@@ -1,6 +1,6 @@
 <template>
       <v-main>
-        <v-container>
+        <v-container v-if="!formShow">
           <v-row>
             <v-col v-for="book in bookDetails" :key="book.id" cols="12" md="4" sm="6" lg="4" xs="12" xl="2">
                 <v-card color="grey lighten-4">
@@ -25,7 +25,11 @@ export default {
   computed:{
     bookDetails(){
         return this.$store.state.bookDetails;
-  }},
+  },
+    formShow(){
+      return this.$store.state.formShow;
+    }
+  },
    created(){
      this.$http.get("../books.json").then(function(res){
        this.$store.commit('CHANGE_BOOKDETAILS',res.data);
