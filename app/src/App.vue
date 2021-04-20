@@ -8,7 +8,7 @@
      <v-list dense>
        <v-subheader>Novel Services</v-subheader>
        <v-list-item-group v-model="selectedItem" color="white">
-        <v-list-item v-for="(item, i) in items" :key="i" @click="route(i)">
+        <v-list-item v-for="(item, i) in items" :key="i" :to="item.link">
           <v-list-item-icon>
             <v-icon v-text="item.icon"></v-icon>
           </v-list-item-icon>
@@ -78,9 +78,6 @@ export default {
       ]
   }),
   methods: {
-    route(i) {
-      Router.push({ name: this.$store.state.items[i].text });
-    },
     logout() {
       this.$store.commit("LOGOUT");
       Router.push({path:'/login'});
