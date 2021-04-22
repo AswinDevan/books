@@ -6,7 +6,7 @@
         <v-form>
           <v-text-field v-model="changeName" :rules="userRules" label="Enter username"></v-text-field>
           <v-text-field v-model="changePass" :rules="passRules" :append-icon="getShow1?'mdi-eye':'mdi-eye-off'" :type="getShow1?'text':'password'" label="Enter Password" hint="Same as username" @click:append="changeEyecon"></v-text-field>
-          <v-checkbox v-model="changeCheck" :rules="checkRules" label="Remember me"></v-checkbox>
+          <v-checkbox v-model="changeCheck" label="Remember me"></v-checkbox>
           <v-btn class="mx-auto d-inline" color="primary" elevation="2" rounded text @click="checkUser()">Login</v-btn>
           <p class="red--text d-inline mx-4">{{error}}</p>
         </v-form>
@@ -25,9 +25,7 @@ import Router from '../route/index'
         value => (value&&value.length>4) || "Value must be 5 or more characters in length."
       ],passRules:[
         value => !!value || "Value is required"
-      ],checkRules:[
-        check=>!!check||"Must be selected"
-        ]
+      ]
     }),
     methods:{
       checkUser(){
