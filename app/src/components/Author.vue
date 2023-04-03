@@ -1,15 +1,15 @@
 <template>
-    <v-main v-if="!formShow">
-        <p>Authors</p>
-    </v-main>
+  <v-main v-if="!formShow">
+    <p>Author of the Book</p>
+  </v-main>
 </template>
 
 <script>
 export default {
-    computed:{
-    formShow(){
+  computed: {
+    formShow() {
       return this.$store.state.formShow;
-    }
-    }
-}
+    },
+  },
+};
 </script>
